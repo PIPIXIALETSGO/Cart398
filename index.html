@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>398</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <img id="custom-cursor" src="hand.png" alt="Custom Cursor">
+    <img id="calendar" src="calendar.png" alt="">
+    <img id="record_player1" src="record_player.png" alt="">
+    <img id="record_player" src="record_player.gif" alt="">
+    <img id="notebook" src="notebook.png" alt="">
+    <div id="keyword"><h2 id="key">Your keyword: </h2></div>
+    <h1 id="nowPlaying">Now playing :</h1>
+    <div id="songInfo"></div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.6.0/p5.js"></script>
+    <script src="https://unpkg.com/ml5@0.6.0/dist/ml5.min.js"></script>
+    <!-- <script src="https://unpkg.com/ml5@1/dist/ml5.min.js"></script> -->
+
+    <script src="sketch.js""></script>
+    <script src="spotify.js""></script>
+    <script>
+        const cursor = document.getElementById('custom-cursor');
+
+      // Offset to place the tip of the pencil at the mouse position
+      const offsetX =139; // Adjust this value to align the pencil tip (half of the image width)
+        const offsetY = 273; // Adjust this value to align the pencil tip (half of the image height)
+
+        document.addEventListener('mousemove', (event) => {
+            // Position the cursor image based on mouse coordinates
+            cursor.style.left = `${event.pageX - offsetX}px`; // Adjust for pencil tip alignment
+            cursor.style.top = `${event.pageY - offsetY}px`; // Adjust for pencil tip alignment
+        });
+    </script>
+</body>
+</html>
